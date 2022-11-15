@@ -11,7 +11,6 @@ export default {
     ctx: ExecutionContext
   ): Promise<Response> {
 
-    //Request is cancelled unless response is read (which itself will cause an error if auth fails and the response body is read twice)
     const response = await env.mockAuth.fetch(request.clone());
     // const authJson = await response.json()
 
