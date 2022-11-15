@@ -1,0 +1,10 @@
+name = "worker1"
+main = "src/index.ts"
+compatibility_date = "2022-10-17"
+
+services = [
+  {binding = "mockAuth", service = "mock-auth"}
+]
+
+[dev]
+port = 8789

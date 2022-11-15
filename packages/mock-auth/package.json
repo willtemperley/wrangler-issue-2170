@@ -1,12 +1,11 @@
 {
-  "name": "w2",
+  "name": "mock-auth",
   "version": "0.0.0",
   "devDependencies": {
-    "wrangler": "2.1.11"
   },
   "private": true,
   "scripts": {
-    "dev": "wrangler dev",
+    "dev": "wrangler dev --local",
     "deploy": "wrangler publish"
   }
 }
