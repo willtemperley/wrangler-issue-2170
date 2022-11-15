@@ -2,10 +2,14 @@
 
 `npm run dev` executes the `turbo run dev --parallel` script.
 
-This starts multiple wrangler processes in parallel (workers mock-auth, worker0 and worker1 in ./packages)
+workers mock-auth, worker0 and worker1 in ./packages run as `wrangler dev --local`
 
 Four curl commands demonstrate the problem:
-[curl-worker0-local](curl-worker0-local)
-curl-worker0-remote - hangs (request to auth gets cancelled)
-curl-worker1-local - works
-curl-worker1-remote - works
+
+[curl-worker0-local](curl-worker0-local) Works.
+
+[curl-worker0-remote](curl-worker0-remote) Hangs - request to mockAuth gets cancelled in the logs.
+
+[curl-worker1-local](curl-worker1-local) Works.
+
+[curl-worker1-remote](curl-worker1-remote) Works.
